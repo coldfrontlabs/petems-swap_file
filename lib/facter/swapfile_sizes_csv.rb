@@ -1,4 +1,4 @@
-if File.exists?('/proc/swaps')
+if File.exist?('/proc/swaps')
   swap_file_array = []
 
   swap_file_output = Facter::Util::Resolution.exec('cat /proc/swaps')
