@@ -46,7 +46,7 @@ class swap_file (
 
   # functionality
   if $files_hiera_merge {
-    $files_real = lookup('swap_file::files', {default_value => {}, 'merge_strategy' => 'deep'})
+    $files_real = lookup('swap_file::files', {value_type => Hash, merge => deep, default_value => {}})
   } else {
     $files_real = $files
   }
